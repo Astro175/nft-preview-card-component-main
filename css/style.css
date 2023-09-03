@@ -1,0 +1,174 @@
+body {
+    background: hsl(217, 54%, 11%);
+    margin: 0;
+    font-family: 'Outfit', sans-serif;
+}
+
+.container {
+    background: hsl(216, 50%, 16%);
+    margin: 0 auto;
+    margin-top: 3em;
+    width: 20%;
+    max-width: 1440px;
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    border-radius: 20px;
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.card::before, .card::after {
+    position: absolute;
+    content: '';
+    inset: 0;
+    transition: transform 200ms ease-in;
+}
+
+.card::before {
+    background: hsl(178, 100%, 50%);
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.image::before {
+    background: hsl(178, 100%, 50%);
+    transform: scaleX(1);
+    transform-origin: left;
+}
+ .card:hover::before{
+    transform: scaleX(1);
+    transform-origin: right;
+    cursor: pointer;
+    opacity: .5;
+} 
+
+.card::after {
+    background-image: url(icon-view.svg);
+    background-repeat: no-repeat;
+    top: 8em;
+    left: 8.5em;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.card:hover::after {
+    opacity: 1;
+    cursor: pointer;
+    transform: scaleX(1);
+    transform-origin: right;
+}
+
+.claim-eth {
+    display: flex;
+    border-bottom: 1px solid hsl(215, 32%, 27%);
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+}
+
+.creator {
+    display: flex;
+    text-align: center;
+}
+
+.image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+} 
+
+.image-avatar {
+    width: 30px;
+    height: 30px;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+p {
+    margin: 0;
+    color: hsl(215, 51%, 70%);
+    font-weight: 300;
+}
+
+
+.line {
+    padding-bottom: 1.5em;
+}
+.eth-icon {
+    padding-right: 0.5em ;
+}
+.shift {
+    margin-left: auto;
+}
+
+.days{
+   padding-left: .7em;
+}
+span {
+    color: white;
+}
+span:hover{
+    color: hsl(178, 100%, 50%);
+    cursor: pointer;
+}
+h1 {
+    margin: 0;
+    padding: .7em 0;
+    color: hsl(0, 0%, 100%);
+    font-weight: 600;
+}
+
+h1:hover {
+    color:hsl(178, 100%, 50%);
+    cursor: pointer;
+}
+
+h4 {
+    margin: 0;
+    color:  hsl(178, 100%, 50%);
+    font-weight: 400;
+    
+}
+
+.paragraph-last {
+    margin-top: .5em ;
+    margin-left: 1em;
+}
+
+/* Media Query  */
+
+@media  screen and (max-width: 480px) {
+
+    body {
+        padding: 1em 1em;
+        
+    }
+    .container {
+        width: 80%;
+        margin-top: 10em;
+        max-width: 375px;
+        padding: 1.5em;
+    }
+
+    .image {
+        height: 250px;
+    }
+
+    h1 {
+        font-size: 1.2rem;
+    }
+
+    p {
+        font-size: .8rem;
+    }
+
+    h4 {
+        font-size: .9rem;
+    }
+    
+}
